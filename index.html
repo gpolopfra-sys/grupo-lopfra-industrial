@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupo Lopfra Industrial | Aislamiento Térmico y Mantenimiento Industrial</title>
+  <meta name="description" content="Especialistas en instalación de aislamiento térmico para altas y bajas temperaturas, mantenimiento HVAC, pisos epóxicos grado alimenticio, pintura especializada y ductería en todo México." />
+
+  <!-- Google Fonts: Plus Jakarta Sans (Títulos) e Inter (Cuerpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Configuración de paleta corporativa Grupo Lopfra Industrial -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lopfra: {
+              navy: '#0B1E38',      // Azul Marino Profundo
+              dark: '#132D4E',      // Azul Industrial Oscuro
+              cyan: '#19A7CE',      // Cian / Azul Acero
+              sky: '#38BDF8',       // Cian Claro brillante
+              red: '#E11D48',       // Rojo Vibrante de acento
+              redDark: '#BE123C',   // Rojo Hover
+              light: '#F4F7FA',     // Gris Claro corporativo
+              slate: '#334155'      // Texto secundario
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Estilos corporativos base y animaciones editoriales */
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #0B1E38;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Patrón de ingeniería sutil para fondos oscuros */
+    .bg-grid-industrial {
+      background-image: 
+        linear-gradient(to right, rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(56, 189, 248, 0.06) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Animación de entrada al hacer scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Línea decorativa estilo AGCO */
+    .agco-accent-bar {
+      position: relative;
+    }
+    .agco-accent-bar::before {
+      content: '';
+      display: inline-block;
+      width: 36px;
+      height: 4px;
+      background: linear-gradient(90deg, #E11D48 0%, #19A7CE 100%);
+      border-radius: 999px;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+
+    /* Transición suave en tarjetas de servicios y galería */
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px -10px rgba(11, 30, 56, 0.14);
+      border-color: #19A7CE;
+    }
+
+    /* Pulso discreto en botón WhatsApp */
+    @keyframes pulseRing {
+      0% { transform: scale(0.95); opacity: 0.7; }
+      70% { transform: scale(1.25); opacity: 0; }
+      100% { transform: scale(1.25); opacity: 0; }
+    }
+    .wa-pulse::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background-color: #25D366;
+      z-index: -1;
+      animation: pulseRing 2.2s infinite;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-lopfra-cyan selection:text-white">
+
+  <!-- ===================================================================== -->
+  <!-- 1. BARRA DE NAVEGACIÓN SUPERIOR (STICKY CORPORATE HEADER)             -->
+  <!-- ===================================================================== -->
+  <header id="navbar" class="sticky top-0 z-50 bg-lopfra-navy/95 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+    <!-- Franja superior informativa (Top Bar estilo corporativo) -->
+    <div class="hidden lg:block bg-[#071426] text-slate-300 text-xs border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+        <div class="flex items-center space-x-6">
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-lopfra-sky"></i>
+            Ecatepec de Morelos, Edo. de Méx. | <strong class="text-white font-medium">Cobertura en Todo el Territorio Nacional</strong>
+          </span>
+          <a href="mailto:gpolopfra@gmail.com" class="flex items-center gap-1.5 hover:text-lopfra-sky transition-colors">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-lopfra-cyan"></i>
+            gpolopfra@gmail.com
+          </a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="https://wa.me/525518537866?text=Hola%20Grupo%20Lopfra%20Industrial,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-medium transition-colors">
+            <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+            WhatsApp Directo: +52 55 1853 7866
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegación Principal -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Logotipo SVG Corporativo Grupo Lopfra Industrial -->
+        <a href="#inicio" class="flex items-center gap-3 group focus:outline-none" aria-label="Inicio Grupo Lopfra Industrial">
+          <svg class="w-12 h-12 shrink-0 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Fondo circular azul industrial -->
+            <circle cx="60" cy="60" r="56" fill="#132D4E" stroke="#19A7CE" stroke-width="2.5"/>
+            <!-- Arco dinámico cian -->
+            <path d="M22 72C34 42 74 28 100 44" stroke="#38BDF8" stroke-width="4" stroke-linecap="round"/>
+            <!-- Engranaje izquierdo -->
+            <path d="M36 36L40 31L45 34L49 30L53 35L49 40L51 45L45 48L41 44L36 46L34 40L36 36Z" fill="#94A3B8"/>
+            <!-- Silueta de planta y tuberías -->
+            <rect x="30" y="54" width="8" height="22" rx="1.5" fill="#CBD5E1"/>
+            <rect x="41" y="47" width="10" height="29" rx="1.5" fill="#F8FAFC"/>
+            <path d="M34 54V48H41" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Triángulo geométrico rojo característico -->
+            <polygon points="72,34 92,70 52,70" fill="none" stroke="#E11D48" stroke-width="5.5" stroke-linejoin="round"/>
+            <polyline points="64,62 72,48 80,62" fill="none" stroke="#E11D48" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Línea base roja -->
+            <line x1="24" y1="84" x2="96" y2="84" stroke="#E11D48" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <div class="flex flex-col">
+            <span class="text-white font-heading font-extrabold text-lg sm:text-xl tracking-tight leading-none">
+              GRUPO <span class="text-lopfra-sky">LOPFRA</span>
+            </span>
+            <span class="text-[11px] sm:text-xs font-bold tracking-[0.22em] text-rose-400 uppercase mt-1">
+              INDUSTRIAL
+            </span>
+            <span class="hidden sm:block text-[10px] text-slate-300 tracking-wide mt-0.5">
+              Aislamiento Térmico y Mantenimiento Industrial
+            </span>
+          </div>
+        </a>
+
+        <!-- Enlaces Desktop -->
+        <nav class="hidden xl:flex items-center space-x-7 text-sm font-medium text-slate-200">
+          <a href="#nosotros" class="hover:text-lopfra-sky transition-colors py-2">Quiénes Somos</a>
+          <a href="#servicios" class="hover:text-lopfra-sky transition-colors py-2">Servicios</a>
+          <a href="#metodologia" class="hover:text-lopfra-sky transition-colors py-2">Metodología</a>
+          <a href="#proyectos" class="hover:text-lopfra-sky transition-colors py-2">Proyectos</a>
+          <a href="#clientes" class="hover:text-lopfra-sky transition-colors py-2">Clientes</a>
+          <a href="#contacto" class="hover:text-lopfra-sky transition-colors py-2">Contacto</a>
+        </nav>
+
+        <!-- Botones CTA Header -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="https://wa.me/525518537866?text=Hola%20Grupo%20Lopfra%20Industrial,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-lg border border-lopfra-cyan/50 text-lopfra-sky hover:bg-lopfra-cyan/10 text-xs font-semibold transition-all">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+          </a>
+          <button onclick="irACotizacion('General')"
+             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-lopfra-red hover:bg-lopfra-redDark text-white text-xs sm:text-sm font-bold shadow-lg shadow-rose-950/40 transition-all cursor-pointer">
+            <span>Solicitar Cotización</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Botón Menú Móvil -->
+        <button id="mobile-menu-btn" type="button" class="xl:hidden p-2.5 rounded-lg text-slate-200 hover:text-white hover:bg-white/10 focus:outline-none" aria-label="Abrir menú">
+          <i data-lucide="menu" class="w-6 h-6" id="menu-icon-open"></i>
+          <i data-lucide="x" class="w-6 h-6 hidden" id="menu-icon-close"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-lopfra-dark border-t border-white/10 px-4 pt-3 pb-6 space-y-2">
+      <a href="#nosotros" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-white hover:bg-white/10">Quiénes Somos</a>
+      <a href="#servicios" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-white hover:bg-white/10">Servicios</a>
+      <a href="#metodologia" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-white hover:bg-white/10">Metodología</a>
+      <a href="#proyectos" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-white hover:bg-white/10">Proyectos</a>
+      <a href="#clientes" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-white hover:bg-white/10">Clientes</a>
+      <a href="#contacto" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-white hover:bg-white/10">Contacto</a>
+      <div class="pt-3 border-t border-white/10 flex flex-col sm:flex-row gap-3">
+        <button onclick="irACotizacion('General')" class="w-full py-3 px-4 rounded-lg bg-lopfra-red text-white font-bold text-sm text-center">
+          Solicitar Cotización
+        </button>
+        <a href="https://wa.me/525518537866?text=Hola%20Grupo%20Lopfra%20Industrial,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-lg bg-emerald-600 text-white font-bold text-sm text-center flex items-center justify-center gap-2">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          WhatsApp: 55 1853 7866
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- 2. HERO PRINCIPAL (ESTILO AGCO FULL-BLEED CON IMPACTO INDUSTRIAL)      -->
+  <!-- ===================================================================== -->
+  <section id="inicio" class="relative bg-lopfra-navy text-white overflow-hidden">
+    <!-- Imagen de fondo industrial con overlay degradado azul marino -->
+    <div class="absolute inset-0 z-0">
+      <!-- REEMPLAZAR FOTO HERO: Puedes cambiar esta URL por una fotografía panorámica de tus instalaciones aisladas -->
+      <img 
+        src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1920&q=80" 
+        alt="Tuberías industriales y sistemas térmicos de alta precisión" 
+        class="w-full h-full object-cover object-center opacity-25 scale-105"
+        onerror="this.style.display='none'"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#071426] via-lopfra-navy/95 to-lopfra-dark/85"></div>
+      <div class="absolute inset-0 bg-grid-industrial"></div>
+    </div>
+
+    <!-- Silueta geométrica decorativa inspirada en el Oso Poligonal Cian de Grupo Lopfra -->
+    <div class="pointer-events-none absolute right-[-4%] bottom-8 w-[420px] md:w-[560px] lg:w-[680px] opacity-20 z-0">
+      <svg viewBox="0 0 600 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+        <g stroke="#38BDF8" stroke-width="2" stroke-linejoin="round">
+          <!-- Contorno exterior poligonal del oso -->
+          <polygon points="35,135 65,95 110,75 185,55 275,52 365,30 445,55 495,105 535,195 575,285 555,315 510,315 525,280 485,220 435,195 425,275 405,315 350,315 375,280 355,195 270,190 255,275 245,315 190,315 215,280 205,195 155,215 130,285 115,315 65,315 95,275 110,185 75,165 40,155"/>
+          <!-- Triangulación interna característica -->
+          <line x1="65" y1="95" x2="110" y2="185"/>
+          <line x1="110" y1="75" x2="155" y2="215"/>
+          <line x1="185" y1="55" x2="155" y2="215"/>
+          <line x1="185" y1="55" x2="270" y2="190"/>
+          <line x1="275" y1="52" x2="270" y2="190"/>
+          <line x1="275" y1="52" x2="355" y2="195"/>
+          <line x1="365" y1="30" x2="355" y2="195"/>
+          <line x1="365" y1="30" x2="435" y2="195"/>
+          <line x1="445" y1="55" x2="435" y2="195"/>
+          <line x1="495" y1="105" x2="435" y2="195"/>
+          <line x1="495" y1="105" x2="485" y2="220"/>
+          <line x1="110" y1="75" x2="270" y2="190"/>
+          <line x1="205" y1="195" x2="255" y2="275"/>
+          <line x1="355" y1="195" x2="425" y2="275"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Contenido Principal del Hero -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 lg:pt-24 lg:pb-28">
+      <div class="max-w-3xl">
+        <!-- Etiqueta superior -->
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-lopfra-dark/90 border border-lopfra-cyan/40 text-lopfra-sky text-xs font-bold tracking-widest uppercase mb-6">
+          <span class="w-2 h-2 rounded-full bg-lopfra-red animate-ping"></span>
+          <span>Cobertura en Todo el Territorio Nacional</span>
+        </div>
+
+        <!-- Titular H1 -->
+        <h1 class="text-3xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight leading-[1.12] text-white mb-6">
+          Ingeniería en <span class="text-transparent bg-clip-text bg-gradient-to-r from-lopfra-sky to-cyan-200">Aislamiento Térmico</span> y Mantenimiento Industrial de Alta Precisión.
+        </h1>
+
+        <!-- Subtítulo -->
+        <p class="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed mb-9 max-w-2xl font-normal">
+          Especialistas en sistemas de altas y bajas temperaturas, HVAC, pisos epóxicos grado alimenticio y ductería. Ejecución segura, rentable y con los más altos estándares de calidad.
+        </p>
+
+        <!-- Botones CTA -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a href="#servicios" 
+             class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-lopfra-red hover:bg-lopfra-redDark text-white font-bold text-sm sm:text-base shadow-xl shadow-rose-950/50 transition-all">
+            <span>Explorar Soluciones</span>
+            <i data-lucide="layers" class="w-5 h-5"></i>
+          </a>
+
+          <a href="https://wa.me/525518537866?text=Hola%20Grupo%20Lopfra%20Industrial,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." 
+             target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/25 text-white font-bold text-sm sm:text-base transition-all">
+            <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400"></i>
+            <span>Cotizar por WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Barra de métricas / destacados en la base del Hero (Estilo AGCO) -->
+      <div class="mt-14 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-lopfra-dark/80 backdrop-blur-md border border-white/10 rounded-xl p-5 flex items-start gap-4">
+          <div class="p-2.5 rounded-lg bg-lopfra-cyan/15 text-lopfra-sky shrink-0">
+            <i data-lucide="globe" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h2 class="font-bold text-white text-sm sm:text-base">Cobertura Nacional</h2>
+            <p class="text-xs text-slate-300 mt-1">Atención directa a plantas industriales en toda la República Mexicana.</p>
+          </div>
+        </div>
+
+        <div class="bg-lopfra-dark/80 backdrop-blur-md border border-white/10 rounded-xl p-5 flex items-start gap-4">
+          <div class="p-2.5 rounded-lg bg-rose-500/15 text-rose-400 shrink-0">
+            <i data-lucide="thermometer" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h2 class="font-bold text-white text-sm sm:text-base">Altas y Bajas Temperaturas</h2>
+            <p class="text-xs text-slate-300 mt-1">Eficiencia energética y control térmico certificado en tuberías y equipos.</p>
+          </div>
+        </div>
+
+        <div class="bg-lopfra-dark/80 backdrop-blur-md border border-white/10 rounded-xl p-5 flex items-start gap-4">
+          <div class="p-2.5 rounded-lg bg-lopfra-cyan/15 text-lopfra-sky shrink-0">
+            <i data-lucide="clipboard-check" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h2 class="font-bold text-white text-sm sm:text-base">Supervisión Técnica y Bitácoras</h2>
+            <p class="text-xs text-slate-300 mt-1">Cronogramas rigurosos, seguridad industrial y reportes fotográficos.</p>
+          </div>
+        </div>
+
+        <div class="bg-lopfra-dark/80 backdrop-blur-md border border-white/10 rounded-xl p-5 flex items-start gap-4">
+          <div class="p-2.5 rounded-lg bg-emerald-500/15 text-emerald-400 shrink-0">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h2 class="font-bold text-white text-sm sm:text-base">Grado Alimenticio e Industrial</h2>
+            <p class="text-xs text-slate-300 mt-1">Cumplimiento normativo para industria alimentaria, química y manufactura.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 3. QUIÉNES SOMOS, MISIÓN, VISIÓN Y OBJETIVOS (ESTILO EDITORIAL AGCO)  -->
+  <!-- ===================================================================== -->
+  <section id="nosotros" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Bloque Editorial Dividido: Quiénes Somos -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20 reveal">
+        <div class="lg:col-span-7">
+          <span class="agco-accent-bar text-xs font-extrabold tracking-widest uppercase text-lopfra-cyan">
+            Identidad Corporativa
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-lopfra-navy mt-3 mb-6 leading-tight">
+            Experiencia técnica y compromiso operativo en cada proyecto industrial.
+          </h2>
+          <p class="text-lg sm:text-xl text-lopfra-navy font-medium leading-relaxed mb-5 border-l-4 border-lopfra-red pl-5 bg-lopfra-light py-4 pr-4 rounded-r-xl">
+            “Somos una empresa conformada por un equipo con grandes conocimientos y experiencia en el aislamiento térmico y mantenimiento industrial.”
+          </p>
+          <p class="text-base text-lopfra-slate leading-relaxed mb-6">
+            En <strong>Grupo Lopfra Industrial</strong> integramos soluciones especializadas para optimizar el rendimiento energético, proteger activos críticos y asegurar la continuidad operativa de plantas industriales, cuartos de máquinas, líneas de proceso y espacios corporativos.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-lopfra-light text-lopfra-navy text-xs font-bold">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-lopfra-cyan"></i> Suministro e Instalación Integral
+            </span>
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-lopfra-light text-lopfra-navy text-xs font-bold">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-lopfra-cyan"></i> Seguridad y Normatividad Ambiental
+            </span>
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-lopfra-light text-lopfra-navy text-xs font-bold">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-lopfra-cyan"></i> Precios Competitivos
+            </span>
+          </div>
+        </div>
+
+        <!-- Tarjeta Visual Técnica con Oso Poligonal de Marca -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl bg-gradient-to-br from-lopfra-navy via-lopfra-dark to-[#08172C] p-8 sm:p-10 text-white shadow-2xl overflow-hidden border border-lopfra-cyan/20">
+            <div class="absolute inset-0 bg-grid-industrial opacity-50"></div>
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-lopfra-sky">Control Térmico Total</span>
+                <span class="px-2.5 py-1 rounded bg-lopfra-red text-white text-[11px] font-bold">MÉXICO</span>
+              </div>
+
+              <!-- Oso Poligonal Cian de Grupo Lopfra -->
+              <div class="my-4 py-4 flex justify-center">
+                <svg viewBox="0 0 600 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[340px] h-auto drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">
+                  <g stroke="#38BDF8" stroke-width="3.2" stroke-linejoin="round">
+                    <polygon points="35,135 65,95 110,75 185,55 275,52 365,30 445,55 495,105 535,195 575,285 555,315 510,315 525,280 485,220 435,195 425,275 405,315 350,315 375,280 355,195 270,190 255,275 245,315 190,315 215,280 205,195 155,215 130,285 115,315 65,315 95,275 110,185 75,165 40,155"/>
+                    <line x1="65" y1="95" x2="110" y2="185"/>
+                    <line x1="110" y1="75" x2="155" y2="215"/>
+                    <line x1="185" y1="55" x2="155" y2="215"/>
+                    <line x1="185" y1="55" x2="270" y2="190"/>
+                    <line x1="275" y1="52" x2="270" y2="190"/>
+                    <line x1="275" y1="52" x2="355" y2="195"/>
+                    <line x1="365" y1="30" x2="355" y2="195"/>
+                    <line x1="365" y1="30" x2="435" y2="195"/>
+                    <line x1="445" y1="55" x2="435" y2="195"/>
+                    <line x1="495" y1="105" x2="435" y2="195"/>
+                    <line x1="495" y1="105" x2="485" y2="220"/>
+                    <line x1="110" y1="75" x2="270" y2="190"/>
+                    <line x1="205" y1="195" x2="255" y2="275"/>
+                    <line x1="355" y1="195" x2="425" y2="275"/>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="pt-4 border-t border-white/15 flex items-center justify-between text-xs text-slate-300">
+                <div>
+                  <p class="font-bold text-white text-sm">GRUPO LOPFRA INDUSTRIAL</p>
+                  <p class="text-lopfra-sky">Soluciones de Ingeniería y Mantenimiento</p>
+                </div>
+                <i data-lucide="snowflake" class="w-7 h-7 text-lopfra-sky"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Misión y Visión (Tarjetas Corporativas Paralelas) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 reveal">
+        <!-- Misión -->
+        <div class="bg-lopfra-light rounded-2xl p-8 sm:p-10 border border-slate-200/80 relative overflow-hidden">
+          <div class="w-12 h-12 rounded-xl bg-lopfra-navy text-lopfra-sky flex items-center justify-center mb-6 shadow-md">
+            <i data-lucide="target" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-2xl font-extrabold text-lopfra-navy mb-4">Nuestra Misión</h3>
+          <p class="text-lopfra-slate leading-relaxed text-base">
+            Consolidarnos como empresa líder en proyectos de instalación de <strong>Aislamiento Térmico para altas y bajas temperaturas</strong>, mantenimientos preventivos y correctivos, cumpliendo con la más alta calidad y los precios más competitivos del mercado.
+          </p>
+        </div>
+
+        <!-- Visión -->
+        <div class="bg-lopfra-light rounded-2xl p-8 sm:p-10 border border-slate-200/80 relative overflow-hidden">
+          <div class="w-12 h-12 rounded-xl bg-lopfra-red text-white flex items-center justify-center mb-6 shadow-md">
+            <i data-lucide="compass" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-2xl font-extrabold text-lopfra-navy mb-4">Nuestra Visión</h3>
+          <p class="text-lopfra-slate leading-relaxed text-base">
+            Ser la mejor y primera opción para nuestros clientes en <strong>Instalación de Aislamiento Térmico y adquisición de suministros</strong> para aislamiento y equipos de Aire Acondicionado, satisfaciendo las necesidades de nuestros clientes y brindándoles excelente servicio y equipos de calidad.
+          </p>
+        </div>
+      </div>
+
+      <!-- Objetivos (4 Pilares con Íconos) -->
+      <div class="bg-lopfra-navy rounded-2xl p-8 sm:p-10 text-white reveal">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 border-b border-white/10 pb-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-lopfra-sky">Compromiso Operativo</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold mt-1">Nuestros Objetivos</h3>
+          </div>
+          <p class="text-sm text-slate-300 mt-2 md:mt-0 max-w-md">
+            Cuatro principios rectores que garantizan resultados seguros, limpios y alineados a su planta.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-lopfra-dark/90 border border-white/10 rounded-xl p-6">
+            <div class="w-10 h-10 rounded-lg bg-lopfra-cyan/20 text-lopfra-sky flex items-center justify-center mb-4">
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </div>
+            <span class="text-xs font-bold text-lopfra-sky">01</span>
+            <p class="text-sm font-semibold text-white mt-1 leading-snug">
+              Ofrecer un servicio profesional con los más altos estándares de calidad.
+            </p>
+          </div>
+
+          <div class="bg-lopfra-dark/90 border border-white/10 rounded-xl p-6">
+            <div class="w-10 h-10 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center mb-4">
+              <i data-lucide="hard-hat" class="w-5 h-5"></i>
+            </div>
+            <span class="text-xs font-bold text-rose-400">02</span>
+            <p class="text-sm font-semibold text-white mt-1 leading-snug">
+              Garantizar nuestros trabajos con máxima seguridad.
+            </p>
+          </div>
+
+          <div class="bg-lopfra-dark/90 border border-white/10 rounded-xl p-6">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+              <i data-lucide="leaf" class="w-5 h-5"></i>
+            </div>
+            <span class="text-xs font-bold text-emerald-400">03</span>
+            <p class="text-sm font-semibold text-white mt-1 leading-snug">
+              Respetar siempre las normas ambientales dentro y fuera de nuestras instalaciones.
+            </p>
+          </div>
+
+          <div class="bg-lopfra-dark/90 border border-white/10 rounded-xl p-6">
+            <div class="w-10 h-10 rounded-lg bg-lopfra-cyan/20 text-lopfra-sky flex items-center justify-center mb-4">
+              <i data-lucide="sliders" class="w-5 h-5"></i>
+            </div>
+            <span class="text-xs font-bold text-lopfra-sky">04</span>
+            <p class="text-sm font-semibold text-white mt-1 leading-snug">
+              Adaptarnos a las necesidades específicas de nuestros clientes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 4. NUESTROS SERVICIOS (6 SOLUCIONES ESPECIALIZADAS EN GRID)           -->
+  <!-- ===================================================================== -->
+  <section id="servicios" class="py-20 lg:py-28 bg-lopfra-light border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-14 reveal">
+        <span class="agco-accent-bar text-xs font-extrabold tracking-widest uppercase text-lopfra-cyan">
+          Portafolio de Soluciones
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-lopfra-navy mt-3 mb-4">
+          Nuestros Servicios Especializados
+        </h2>
+        <p class="text-base sm:text-lg text-lopfra-slate">
+          Soluciones integrales de ingeniería térmica, climatización HVAC, recubrimientos industriales y fabricación metálica para el sector industrial y comercial.
+        </p>
+      </div>
+
+      <!-- Grid de 6 Servicios -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Servicio 01 -->
+        <article class="service-card bg-white rounded-2xl p-8 border border-slate-200 flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-xl bg-lopfra-navy text-lopfra-sky flex items-center justify-center">
+                <i data-lucide="flame" class="w-7 h-7"></i>
+              </div>
+              <span class="text-3xl font-extrabold text-slate-200 font-heading">01</span>
+            </div>
+            <h3 class="text-xl font-extrabold text-lopfra-navy mb-3">
+              Aislamiento Térmico Industrial
+            </h3>
+            <p class="text-sm text-lopfra-slate leading-relaxed mb-6">
+              Venta e instalación de aislamiento térmico para tuberías y equipos con sistemas de <strong>altas y bajas temperaturas</strong>. Acabados profesionales en lámina de aluminio, acero inoxidable y chaquetas térmicas removibles.
+            </p>
+          </div>
+          <button onclick="irACotizacion('01. Aislamiento Térmico Industrial')" 
+                  class="w-full py-3 px-4 rounded-xl bg-lopfra-light hover:bg-lopfra-navy text-lopfra-navy hover:text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors cursor-pointer">
+            <span>Solicitar Información</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
+        </article>
+
+        <!-- Servicio 02 -->
+        <article class="service-card bg-white rounded-2xl p-8 border border-slate-200 flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-xl bg-lopfra-navy text-lopfra-sky flex items-center justify-center">
+                <i data-lucide="grid" class="w-7 h-7"></i>
+              </div>
+              <span class="text-3xl font-extrabold text-slate-200 font-heading">02</span>
+            </div>
+            <h3 class="text-xl font-extrabold text-lopfra-navy mb-3">
+              Pisos y Pintura Epóxica
+            </h3>
+            <p class="text-sm text-lopfra-slate leading-relaxed mb-6">
+              Aplicación de pisos epóxicos de alta resistencia mecánica y química, así como <strong>pintura epóxica en grado alimenticio</strong> para plantas de proceso, cuartos limpios, almacenes y naves industriales.
+            </p>
+          </div>
+          <button onclick="irACotizacion('02. Pisos y Pintura Epóxica')" 
+                  class="w-full py-3 px-4 rounded-xl bg-lopfra-light hover:bg-lopfra-navy text-lopfra-navy hover:text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors cursor-pointer">
+            <span>Solicitar Información</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
+        </article>
+
+        <!-- Servicio 03 -->
+        <article class="service-card bg-white rounded-2xl p-8 border border-slate-200 flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-xl bg-lopfra-navy text-lopfra-sky flex items-center justify-center">
+                <i data-lucide="wrench" class="w-7 h-7"></i>
+              </div>
+              <span class="text-3xl font-extrabold text-slate-200 font-heading">03</span>
+            </div>
+            <h3 class="text-xl font-extrabold text-lopfra-navy mb-3">
+              Mantenimiento HVAC Especializado
+            </h3>
+            <p class="text-sm text-lopfra-slate leading-relaxed mb-6">
+              Mantenimiento preventivo y correctivo a equipos HVAC: <strong>Mini Split, Piso Techo, VRV-VRF, Unidades Paquete, Fan &amp; Coil y Chillers de agua helada</strong>, maximizando eficiencia y vida útil.
+            </p>
+          </div>
+          <button onclick="irACotizacion('03. Mantenimiento HVAC Especializado')" 
+                  class="w-full py-3 px-4 rounded-xl bg-lopfra-light hover:bg-lopfra-navy text-lopfra-navy hover:text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors cursor-pointer">
+            <span>Solicitar Información</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
+        </article>
+
+        <!-- Servicio 04 -->
+        <article class="service-card bg-white rounded-2xl p-8 border border-slate-200 flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-xl bg-lopfra-navy text-lopfra-sky flex items-center justify-center">
+                <i data-lucide="wind" class="w-7 h-7"></i>
+              </div>
+              <span class="text-3xl font-extrabold text-slate-200 font-heading">04</span>
+            </div>
+            <h3 class="text-xl font-extrabold text-lopfra-navy mb-3">
+              Equipos de Aire Acondicionado
+            </h3>
+            <p class="text-sm text-lopfra-slate leading-relaxed mb-6">
+              Venta, suministro, instalación y mantenimiento integral de equipos de aire acondicionado comercial e industrial con dimensionamiento térmico adaptado a cada espacio.
+            </p>
+          </div>
+          <button onclick="irACotizacion('04. Equipos de Aire Acondicionado')" 
+                  class="w-full py-3 px-4 rounded-xl bg-lopfra-light hover:bg-lopfra-navy text-lopfra-navy hover:text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors cursor-pointer">
+            <span>Solicitar Información</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
+        </article>
+
+        <!-- Servicio 05 -->
+        <article class="service-card bg-white rounded-2xl p-8 border border-slate-200 flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-xl bg-lopfra-navy text-lopfra-sky flex items-center justify-center">
+                <i data-lucide="paint-roller" class="w-7 h-7"></i>
+              </div>
+              <span class="text-3xl font-extrabold text-slate-200 font-heading">05</span>
+            </div>
+            <h3 class="text-xl font-extrabold text-lopfra-navy mb-3">
+              Pintura Especializada
+            </h3>
+            <p class="text-sm text-lopfra-slate leading-relaxed mb-6">
+              Aplicación de recubrimientos industriales anticorrosivos, esmaltes de alto desempeño, identificación de tuberías bajo norma oficial y protección de estructuras y maquinaria.
+            </p>
+          </div>
+          <button onclick="irACotizacion('05. Pintura Especializada')" 
+                  class="w-full py-3 px-4 rounded-xl bg-lopfra-light hover:bg-lopfra-navy text-lopfra-navy hover:text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors cursor-pointer">
+            <span>Solicitar Información</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
+        </article>
+
+        <!-- Servicio 06 -->
+        <article class="service-card bg-white rounded-2xl p-8 border border-slate-200 flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-xl bg-lopfra-navy text-lopfra-sky flex items-center justify-center">
+                <i data-lucide="fan" class="w-7 h-7"></i>
+              </div>
+              <span class="text-3xl font-extrabold text-slate-200 font-heading">06</span>
+            </div>
+            <h3 class="text-xl font-extrabold text-lopfra-navy mb-3">
+              Fabricación de Ductería
+            </h3>
+            <p class="text-sm text-lopfra-slate leading-relaxed mb-6">
+              Diseño, fabricación a medida e instalación de ductos metálicos galvanizados e inoxidables para extracción, ventilación, inyección de aire y bancos de filtros industriales.
+            </p>
+          </div>
+          <button onclick="irACotizacion('06. Fabricación de Ductería')" 
+                  class="w-full py-3 px-4 rounded-xl bg-lopfra-light hover:bg-lopfra-navy text-lopfra-navy hover:text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors cursor-pointer">
+            <span>Solicitar Información</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 5. NUESTRO PERSONAL Y METODOLOGÍA DE TRABAJO (SECCIÓN OSCURA)         -->
+  <!-- ===================================================================== -->
+  <section id="metodologia" class="py-20 lg:py-28 bg-lopfra-navy text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-industrial opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-16 reveal">
+        <span class="agco-accent-bar text-xs font-extrabold tracking-widest uppercase text-lopfra-sky">
+          Nuestro Personal y Ejecución
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">
+          Metodología de Trabajo con Trazabilidad y Seguridad
+        </h2>
+        <p class="text-base sm:text-lg text-slate-300">
+          Combinamos talento técnico certificado con supervisión permanente en campo para entregar obras en tiempo, forma y sin contratiempos operativos.
+        </p>
+      </div>
+
+      <!-- 3 Columnas Numeradas (01 Primero, 02 Segundo, 03 Tercero) -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Pilar 01 -->
+        <div class="bg-lopfra-dark/90 backdrop-blur-sm rounded-2xl p-8 sm:p-10 border border-white/10 hover:border-lopfra-sky/50 transition-all reveal">
+          <div class="flex items-center justify-between mb-6">
+            <span class="px-3 py-1 rounded-full bg-lopfra-cyan/20 text-lopfra-sky text-xs font-extrabold uppercase tracking-wider">
+              01 Primero
+            </span>
+            <i data-lucide="users" class="w-7 h-7 text-lopfra-sky"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-white mb-4">
+            Experiencia y Eficiencia
+          </h3>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Contamos con personal altamente calificado con experiencia, para atender todos los requerimientos de su empresa, con un alto grado de calidad y eficiencia, para reducir tiempos y costos.
+          </p>
+        </div>
+
+        <!-- Pilar 02 -->
+        <div class="bg-lopfra-dark/90 backdrop-blur-sm rounded-2xl p-8 sm:p-10 border border-white/10 hover:border-lopfra-sky/50 transition-all reveal">
+          <div class="flex items-center justify-between mb-6">
+            <span class="px-3 py-1 rounded-full bg-rose-500/20 text-rose-400 text-xs font-extrabold uppercase tracking-wider">
+              02 Segundo
+            </span>
+            <i data-lucide="graduation-cap" class="w-7 h-7 text-rose-400"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-white mb-4">
+            Capacitación Continua
+          </h3>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Nuestro personal se capacita continuamente en competencias técnicas, seguridad industrial y buenas prácticas, cumpliendo con los protocolos exigidos en plantas de alto nivel.
+          </p>
+        </div>
+
+        <!-- Pilar 03 -->
+        <div class="bg-lopfra-dark/90 backdrop-blur-sm rounded-2xl p-8 sm:p-10 border border-white/10 hover:border-lopfra-sky/50 transition-all reveal">
+          <div class="flex items-center justify-between mb-6">
+            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-extrabold uppercase tracking-wider">
+              03 Tercero
+            </span>
+            <i data-lucide="file-check-2" class="w-7 h-7 text-emerald-400"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-white mb-4">
+            Control y Trazabilidad de Obra
+          </h3>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Nuestros servicios son ejecutados bajo supervisión técnica y de seguridad; elaboramos adecuadamente cronogramas de trabajo, realizando bitácoras de obra y reportes fotográficos.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 6. GALERÍA DE PROYECTOS EJECUTADOS (FILTROS INTERACTIVOS + LIGHTBOX)  -->
+  <!-- ===================================================================== -->
+  <section id="proyectos" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6 reveal">
+        <div class="max-w-2xl">
+          <span class="agco-accent-bar text-xs font-extrabold tracking-widest uppercase text-lopfra-cyan">
+            Portafolio de Obra
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-lopfra-navy mt-3 mb-3">
+            Proyectos Ejecutados en Planta
+          </h2>
+          <p class="text-base text-lopfra-slate">
+            Muestra representativa de nuestras especialidades en aislamiento térmico, recubrimientos epóxicos, ductería, sistemas HVAC y adecuación de espacios industriales.
+          </p>
+        </div>
+
+        <!-- Filtros Interactivos por Categoría -->
+        <div class="flex flex-wrap gap-2" id="project-filters" role="tablist" aria-label="Filtrar proyectos por categoría">
+          <button data-filter="todos" class="filter-btn active px-4 py-2 rounded-lg text-xs font-bold bg-lopfra-navy text-white transition-all cursor-pointer">
+            Todos
+          </button>
+          <button data-filter="aislamiento" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-lopfra-light text-lopfra-navy hover:bg-slate-200 transition-all cursor-pointer">
+            Aislamiento Térmico
+          </button>
+          <button data-filter="pintura" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-lopfra-light text-lopfra-navy hover:bg-slate-200 transition-all cursor-pointer">
+            Pintura Especializada
+          </button>
+          <button data-filter="epoxicos" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-lopfra-light text-lopfra-navy hover:bg-slate-200 transition-all cursor-pointer">
+            Pisos Epóxicos
+          </button>
+          <button data-filter="hvac" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-lopfra-light text-lopfra-navy hover:bg-slate-200 transition-all cursor-pointer">
+            Ductos y HVAC
+          </button>
+          <button data-filter="remodelacion" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-lopfra-light text-lopfra-navy hover:bg-slate-200 transition-all cursor-pointer">
+            Obra Civil y Remodelación
+          </button>
+        </div>
+      </div>
+
+      <!-- NOTA PARA EL ADMINISTRADOR DEL SITIO:
+           Las siguientes tarjetas muestran los proyectos reales documentados en la Carta de Presentación de Grupo Lopfra Industrial.
+           Cuando extraigas las imágenes originales de tu PDF, simplemente sustituye el atributo `src="..."` de cada etiqueta <img>
+           por la ruta local de tu foto (ej. `assets/trampa-succion.jpg`). -->
+
+      <!-- Grid de Proyectos -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7" id="projects-grid">
+
+        <!-- Proyecto 1: Aislamiento Térmico (Trampa de Succión y Colector) -->
+        <div class="project-item group bg-lopfra-light rounded-2xl overflow-hidden border border-slate-200 cursor-pointer reveal"
+             data-category="aislamiento"
+             onclick="openLightbox(this)"
+             data-title="Aislamiento Térmico en Trampa de Succión y Colector de Líquido"
+             data-cat="Aislamiento Térmico"
+             data-desc="Instalación de aislamiento térmico para baja temperatura con acabado sanitario en chaqueta de acero inoxidable tipo espejo en cuarto de máquinas y líneas de suministro.">
+          <div class="relative h-60 overflow-hidden bg-lopfra-dark">
+            <!-- REEMPLAZAR FOTO: Trampa de succión y colector de líquido en acero inoxidable (Página 7 del PDF) -->
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=900&q=80" 
+                 alt="Aislamiento térmico en trampa de succión y colector" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://placehold.co/800x600/132D4E/38BDF8?text=Aislamiento+Termico+Inoxidable'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-lopfra-navy/85 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-md bg-lopfra-navy/90 text-lopfra-sky text-[11px] font-bold uppercase tracking-wider border border-lopfra-cyan/30">
+              Aislamiento Térmico
+            </span>
+            <div class="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center group-hover:bg-lopfra-red transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lopfra-navy text-lg group-hover:text-lopfra-cyan transition-colors">
+              Trampa de Succión y Colector de Líquido
+            </h3>
+            <p class="text-xs text-lopfra-slate mt-2 line-clamp-2">
+              Forro metálico en acero inoxidable para recipientes a presión y líneas de refrigeración industrial.
+            </p>
+          </div>
+        </div>
+
+        <!-- Proyecto 2: Aislamiento Térmico (Líneas de Suministro y Válvulas) -->
+        <div class="project-item group bg-lopfra-light rounded-2xl overflow-hidden border border-slate-200 cursor-pointer reveal"
+             data-category="aislamiento"
+             onclick="openLightbox(this)"
+             data-title="Enchaquetado Metálico en Líneas de Suministro y Tren de Válvulas"
+             data-cat="Aislamiento Térmico"
+             data-desc="Aislamiento térmico de alta precisión en codos, válvulas y tuberías de proceso con chaqueta de aluminio/inoxidable y señalización de flujo.">
+          <div class="relative h-60 overflow-hidden bg-lopfra-dark">
+            <!-- REEMPLAZAR FOTO: Tuberías de suministro con chaqueta metálica (Página 8 del PDF) -->
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=80" 
+                 alt="Tuberías de suministro aisladas térmicamente" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://placehold.co/800x600/132D4E/38BDF8?text=Lineas+de+Suministro'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-lopfra-navy/85 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-md bg-lopfra-navy/90 text-lopfra-sky text-[11px] font-bold uppercase tracking-wider border border-lopfra-cyan/30">
+              Aislamiento Térmico
+            </span>
+            <div class="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center group-hover:bg-lopfra-red transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lopfra-navy text-lg group-hover:text-lopfra-cyan transition-colors">
+              Líneas de Suministro y Tren de Válvulas
+            </h3>
+            <p class="text-xs text-lopfra-slate mt-2 line-clamp-2">
+              Aislamiento térmico en tuberías de proceso, codos seccionados y cajas desmontables para válvulas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Proyecto 3: Pintura Especializada -->
+        <div class="project-item group bg-lopfra-light rounded-2xl overflow-hidden border border-slate-200 cursor-pointer reveal"
+             data-category="pintura"
+             onclick="openLightbox(this)"
+             data-title="Pintura Especializada en Equipos, Tanques y Tuberías de Proceso"
+             data-cat="Pintura Especializada"
+             data-desc="Preparación de superficie y aplicación de recubrimientos epóxicos y poliuretanos de alta resistencia en tanques de proceso, condensadores y tuberías industriales.">
+          <div class="relative h-60 overflow-hidden bg-lopfra-dark">
+            <!-- REEMPLAZAR FOTO: Pintura especializada blanca en equipos y válvulas (Página 9 del PDF) -->
+            <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=900&q=80" 
+                 alt="Pintura industrial especializada en equipos y tuberías" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://placehold.co/800x600/132D4E/38BDF8?text=Pintura+Especializada'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-lopfra-navy/85 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-md bg-lopfra-red text-white text-[11px] font-bold uppercase tracking-wider">
+              Pintura Especializada
+            </span>
+            <div class="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center group-hover:bg-lopfra-red transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lopfra-navy text-lg group-hover:text-lopfra-cyan transition-colors">
+              Recubrimiento Sanitario y Anticorrosivo
+            </h3>
+            <p class="text-xs text-lopfra-slate mt-2 line-clamp-2">
+              Protección industrial de alta durabilidad para maquinaria, tanques de almacenamiento y estructuras.
+            </p>
+          </div>
+        </div>
+
+        <!-- Proyecto 4: Pisos Epóxicos -->
+        <div class="project-item group bg-lopfra-light rounded-2xl overflow-hidden border border-slate-200 cursor-pointer reveal"
+             data-category="epoxicos"
+             onclick="openLightbox(this)"
+             data-title="Pisos Epóxicos Grado Alimenticio y Delimitación Industrial"
+             data-cat="Pisos Epóxicos"
+             data-desc="Aplicación de sistema epóxico autonivelante de alto tráfico, acabado brillante sanitario y franjas de seguridad industrial en pasillos operativos y naves logísticas.">
+          <div class="relative h-60 overflow-hidden bg-lopfra-dark">
+            <!-- REEMPLAZAR FOTO: Pisos epóxicos brillantes y pasillos delimitados (Página 10 del PDF) -->
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80" 
+                 alt="Piso epóxico industrial de alta resistencia" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://placehold.co/800x600/132D4E/38BDF8?text=Pisos+Epoxicos'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-lopfra-navy/85 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-md bg-lopfra-navy/90 text-lopfra-sky text-[11px] font-bold uppercase tracking-wider border border-lopfra-cyan/30">
+              Pisos Epóxicos
+            </span>
+            <div class="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center group-hover:bg-lopfra-red transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lopfra-navy text-lg group-hover:text-lopfra-cyan transition-colors">
+              Pisos Epóxicos Grado Alimenticio y Tráfico Pesado
+            </h3>
+            <p class="text-xs text-lopfra-slate mt-2 line-clamp-2">
+              Superficies libres de juntas, resistentes a abrasión química y con señalización normativa.
+            </p>
+          </div>
+        </div>
+
+        <!-- Proyecto 5: Ductos y HVAC -->
+        <div class="project-item group bg-lopfra-light rounded-2xl overflow-hidden border border-slate-200 cursor-pointer reveal"
+             data-category="hvac"
+             onclick="openLightbox(this)"
+             data-title="Mantenimiento VRF LG, Extractor Axial S&P y Fabricación de Ductería"
+             data-cat="Ductos y HVAC"
+             data-desc="Mantenimiento preventivo/correctivo a sistemas VRF LG, extractores axiales S&P, instalación de ductería galvanizada y fabricación de retorno de aire con banco de filtros.">
+          <div class="relative h-60 overflow-hidden bg-lopfra-dark">
+            <!-- REEMPLAZAR FOTO: Sistemas VRF LG, ductería y banco de filtros (Páginas 11 y 13 del PDF) -->
+            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=900&q=80" 
+                 alt="Instalación de ductería y mantenimiento HVAC VRF" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://placehold.co/800x600/132D4E/38BDF8?text=Ductos+y+HVAC'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-lopfra-navy/85 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-md bg-lopfra-navy/90 text-lopfra-sky text-[11px] font-bold uppercase tracking-wider border border-lopfra-cyan/30">
+              Ductos y HVAC
+            </span>
+            <div class="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center group-hover:bg-lopfra-red transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lopfra-navy text-lg group-hover:text-lopfra-cyan transition-colors">
+              Sistemas VRF, Extractores Axiales y Ductería
+            </h3>
+            <p class="text-xs text-lopfra-slate mt-2 line-clamp-2">
+              Fabricación de retorno de aire con banco de filtros, ductos de inyección y mantenimiento HVAC.
+            </p>
+          </div>
+        </div>
+
+        <!-- Proyecto 6: Obra Civil y Remodelación -->
+        <div class="project-item group bg-lopfra-light rounded-2xl overflow-hidden border border-slate-200 cursor-pointer reveal"
+             data-category="remodelacion"
+             onclick="openLightbox(this)"
+             data-title="Remodelación de Oficinas Administrativas, Sala de Juntas y Mobiliario"
+             data-cat="Obra Civil y Remodelación"
+             data-desc="Diseño y construcción de cubículos en tablaroca, cancelería de cristal templado, adecuación integral de sala de juntas y fabricación de libreros estilo vintage.">
+          <div class="relative h-60 overflow-hidden bg-lopfra-dark">
+            <!-- REEMPLAZAR FOTO: Remodelación de oficinas, sala de juntas y tablaroca (Página 12 del PDF) -->
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80" 
+                 alt="Remodelación de oficinas administrativas y sala de juntas" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://placehold.co/800x600/132D4E/38BDF8?text=Remodelacion+Oficinas'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-lopfra-navy/85 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-md bg-lopfra-navy/90 text-lopfra-sky text-[11px] font-bold uppercase tracking-wider border border-lopfra-cyan/30">
+              Obra Civil y Remodelación
+            </span>
+            <div class="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center group-hover:bg-lopfra-red transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lopfra-navy text-lg group-hover:text-lopfra-cyan transition-colors">
+              Oficinas Administrativas, Sala de Juntas y Tablaroca
+            </h3>
+            <p class="text-xs text-lopfra-slate mt-2 line-clamp-2">
+              Adecuación de áreas administrativas, divisores en tablaroca y fabricación de mobiliario industrial.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 7. CLIENTES Y COBERTURA NACIONAL (PRUEBA SOCIAL ESTILO AGCO)          -->
+  <!-- ===================================================================== -->
+  <section id="clientes" class="py-20 bg-lopfra-light border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Banner de Cobertura Nacional -->
+      <div class="rounded-2xl bg-gradient-to-r from-lopfra-navy to-lopfra-dark p-8 sm:p-10 text-white mb-16 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl reveal">
+        <div class="flex items-start sm:items-center gap-5">
+          <div class="w-14 h-14 rounded-2xl bg-lopfra-cyan/20 border border-lopfra-sky/40 text-lopfra-sky flex items-center justify-center shrink-0">
+            <i data-lucide="map" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-lopfra-sky">Alcance Operativo</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold mt-1">
+              Cobertura en Todo el Territorio Nacional
+            </h3>
+            <p class="text-sm text-slate-300 mt-1">
+              Atención directa a plantas industriales, centros de distribución y corporativos en toda la República Mexicana.
+            </p>
+          </div>
+        </div>
+        <button onclick="irACotizacion('Proyecto Foráneo / Nacional')" 
+                class="shrink-0 px-6 py-3.5 rounded-xl bg-lopfra-red hover:bg-lopfra-redDark text-white font-bold text-sm transition-all cursor-pointer">
+          Agendar Visita Técnica
+        </button>
+      </div>
+
+      <!-- Clientes Principales -->
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-xs font-extrabold tracking-widest uppercase text-lopfra-cyan">
+          Confianza Industrial
+        </span>
+        <h2 class="text-3xl font-extrabold text-lopfra-navy mt-2">
+          Algunos de Nuestros Clientes
+        </h2>
+        <p class="text-sm text-lopfra-slate mt-2">
+          Empresas líderes en manufactura, bebidas, ingeniería y química industrial respaldan la calidad de nuestro trabajo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+        
+        <!-- Cliente 1: Coca-Cola FEMSA México -->
+        <div class="bg-white rounded-2xl p-8 border border-slate-200 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md hover:border-lopfra-cyan transition-all">
+          <div class="px-5 py-3 rounded-lg bg-[#E61D2B] text-white font-heading font-extrabold tracking-tight text-lg mb-3 shadow-sm">
+            Coca-Cola <span class="block text-sm tracking-widest border-t border-white/40 mt-0.5 pt-0.5">FEMSA MÉXICO</span>
+          </div>
+          <span class="text-xs font-semibold text-slate-500">Industria de Bebidas y Consumo</span>
+        </div>
+
+        <!-- Cliente 2: SANMARTIN -->
+        <div class="bg-white rounded-2xl p-8 border border-slate-200 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md hover:border-lopfra-cyan transition-all">
+          <div class="flex items-center gap-2.5 text-[#0055A5] font-heading font-extrabold text-xl tracking-wide mb-3">
+            <i data-lucide="settings" class="w-7 h-7"></i>
+            <span>SANMARTIN</span>
+          </div>
+          <span class="text-xs font-semibold text-slate-500">Ingeniería y Maquinaria Industrial</span>
+        </div>
+
+        <!-- Cliente 3: IPRIMSA -->
+        <div class="bg-white rounded-2xl p-8 border border-slate-200 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md hover:border-lopfra-cyan transition-all">
+          <div class="flex items-center gap-2 text-lopfra-navy font-heading font-extrabold text-2xl tracking-widest mb-3">
+            <i data-lucide="cog" class="w-7 h-7 text-slate-500"></i>
+            <span>IPRIMSA</span>
+          </div>
+          <span class="text-xs font-semibold text-slate-500">Manufactura y Procesos Industriales</span>
+        </div>
+
+        <!-- Cliente 4: QUACHEMIC S.A. DE C.V. -->
+        <div class="bg-white rounded-2xl p-8 border border-slate-200 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md hover:border-lopfra-cyan transition-all">
+          <div class="px-4 py-2.5 rounded-lg bg-[#004A99] text-white font-heading font-extrabold text-base tracking-wide mb-3">
+            QUACHEMIC <span class="block text-[11px] font-semibold text-sky-200">S.A. DE C.V.</span>
+          </div>
+          <span class="text-xs font-semibold text-slate-500">Soluciones Químicas Industriales</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 8. CONTACTO Y SOLICITUD DE COTIZACIÓN                                 -->
+  <!-- ===================================================================== -->
+  <section id="contacto" class="py-20 lg:py-28 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Columna Izquierda: Datos de Contacto Directo -->
+        <div class="lg:col-span-5 reveal">
+          <span class="agco-accent-bar text-xs font-extrabold tracking-widest uppercase text-lopfra-cyan">
+            Atención Inmediata
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-lopfra-navy mt-3 mb-4">
+            Contáctenos Para Tener el Gusto de Atenderlos
+          </h2>
+          <p class="text-base text-lopfra-slate leading-relaxed mb-8">
+            ¿Requiere levantamiento técnico en planta, suministro de materiales térmicos o póliza de mantenimiento HVAC? Nuestro equipo de ingeniería está listo para asesorarle.
+          </p>
+
+          <div class="space-y-5">
+            <!-- WhatsApp / Teléfono -->
+            <a href="https://wa.me/525518537866?text=Hola%20Grupo%20Lopfra%20Industrial,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." 
+               target="_blank" rel="noopener noreferrer"
+               class="flex items-start gap-4 p-4 rounded-xl bg-lopfra-light border border-slate-200 hover:border-emerald-500 transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-700">WhatsApp / Teléfono Directo</span>
+                <p class="text-lg font-extrabold text-lopfra-navy group-hover:text-emerald-700 transition-colors">
+                  +52 55 1853 7866
+                </p>
+                <span class="text-xs text-slate-500">Clic para iniciar chat directo</span>
+              </div>
+            </a>
+
+            <!-- Correo Electrónico -->
+            <a href="mailto:gpolopfra@gmail.com" 
+               class="flex items-start gap-4 p-4 rounded-xl bg-lopfra-light border border-slate-200 hover:border-lopfra-cyan transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-lopfra-navy text-lopfra-sky flex items-center justify-center shrink-0">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-lopfra-cyan">Correo Electrónico</span>
+                <p class="text-base sm:text-lg font-extrabold text-lopfra-navy group-hover:text-lopfra-cyan transition-colors break-all">
+                  gpolopfra@gmail.com
+                </p>
+                <span class="text-xs text-slate-500">Envío de planos, especificaciones y requisiciones</span>
+              </div>
+            </a>
+
+            <!-- Ubicación Física -->
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-lopfra-light border border-slate-200">
+              <div class="w-12 h-12 rounded-xl bg-lopfra-red text-white flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-lopfra-red">Oficinas y Base Operativa</span>
+                <p class="text-sm font-bold text-lopfra-navy mt-0.5 leading-snug">
+                  Calle Alcornoque Mz 22 Lt 5, Col. La Palma, C.P. 55507, Ecatepec de Morelos, Estado de México.
+                </p>
+                <span class="inline-block mt-1.5 text-xs font-semibold text-lopfra-cyan">
+                  Cobertura en todo el territorio nacional
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Formulario de Cotización Interactivo -->
+        <div class="lg:col-span-7 reveal">
+          <div class="bg-lopfra-light rounded-2xl p-6 sm:p-10 border border-slate-200 shadow-lg">
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200">
+              <div>
+                <h3 class="text-2xl font-extrabold text-lopfra-navy">Solicitar Cotización</h3>
+                <p class="text-xs sm:text-sm text-lopfra-slate mt-1">Complete los datos de su proyecto y envíelo al instante por WhatsApp o Correo.</p>
+              </div>
+              <i data-lucide="file-text" class="w-8 h-8 text-lopfra-cyan hidden sm:block"></i>
+            </div>
+
+            <form id="quote-form" class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="nombre" class="block text-xs font-bold uppercase tracking-wider text-lopfra-navy mb-1.5">Nombre Completo *</label>
+                  <input type="text" id="nombre" name="nombre" required placeholder="Ej. Ing. Carlos Mendoza"
+                         class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-lopfra-navy focus:outline-none focus:border-lopfra-cyan focus:ring-2 focus:ring-lopfra-cyan/20" />
+                </div>
+
+                <div>
+                  <label for="empresa" class="block text-xs font-bold uppercase tracking-wider text-lopfra-navy mb-1.5">Empresa / Planta *</label>
+                  <input type="text" id="empresa" name="empresa" required placeholder="Nombre de su empresa"
+                         class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-lopfra-navy focus:outline-none focus:border-lopfra-cyan focus:ring-2 focus:ring-lopfra-cyan/20" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="telefono" class="block text-xs font-bold uppercase tracking-wider text-lopfra-navy mb-1.5">Teléfono / WhatsApp *</label>
+                  <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 55 1234 5678"
+                         class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-lopfra-navy focus:outline-none focus:border-lopfra-cyan focus:ring-2 focus:ring-lopfra-cyan/20" />
+                </div>
+
+                <div>
+                  <label for="correo" class="block text-xs font-bold uppercase tracking-wider text-lopfra-navy mb-1.5">Correo Corporativo *</label>
+                  <input type="email" id="correo" name="correo" required placeholder="correo@empresa.com"
+                         class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-lopfra-navy focus:outline-none focus:border-lopfra-cyan focus:ring-2 focus:ring-lopfra-cyan/20" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="servicio" class="block text-xs font-bold uppercase tracking-wider text-lopfra-navy mb-1.5">Servicio de Interés *</label>
+                  <select id="servicio" name="servicio" required
+                          class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-lopfra-navy focus:outline-none focus:border-lopfra-cyan focus:ring-2 focus:ring-lopfra-cyan/20">
+                    <option value="01. Aislamiento Térmico Industrial">01. Aislamiento Térmico Industrial</option>
+                    <option value="02. Pisos y Pintura Epóxica">02. Pisos y Pintura Epóxica</option>
+                    <option value="03. Mantenimiento HVAC Especializado">03. Mantenimiento HVAC Especializado</option>
+                    <option value="04. Equipos de Aire Acondicionado">04. Equipos de Aire Acondicionado</option>
+                    <option value="05. Pintura Especializada">05. Pintura Especializada</option>
+                    <option value="06. Fabricación de Ductería">06. Fabricación de Ductería</option>
+                    <option value="Proyecto Integral / Varios Servicios">Proyecto Integral / Varios Servicios</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="ubicacion" class="block text-xs font-bold uppercase tracking-wider text-lopfra-navy mb-1.5">Ciudad / Estado del Proyecto</label>
+                  <input type="text" id="ubicacion" name="ubicacion" placeholder="Ej. Estado de México, Querétaro, CDMX..."
+                         class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-lopfra-navy focus:outline-none focus:border-lopfra-cyan focus:ring-2 focus:ring-lopfra-cyan/20" />
+                </div>
+              </div>
+
+              <div>
+                <label for="descripcion" class="block text-xs font-bold uppercase tracking-wider text-lopfra-navy mb-1.5">Descripción Breve del Requerimiento *</label>
+                <textarea id="descripcion" name="descripcion" rows="3" required placeholder="Indique tipo de equipo, tubería, metros cuadrados aproximados o necesidad de mantenimiento..."
+                          class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-lopfra-navy focus:outline-none focus:border-lopfra-cyan focus:ring-2 focus:ring-lopfra-cyan/20"></textarea>
+              </div>
+
+              <!-- Botones de Envío Directo (WhatsApp y Correo) -->
+              <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <button type="submit" data-channel="whatsapp"
+                        class="w-full py-3.5 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md flex items-center justify-center gap-2 transition-all cursor-pointer">
+                  <i data-lucide="message-circle" class="w-5 h-5"></i>
+                  <span>Enviar por WhatsApp</span>
+                </button>
+
+                <button type="submit" data-channel="email"
+                        class="w-full py-3.5 px-5 rounded-xl bg-lopfra-navy hover:bg-lopfra-dark text-white font-bold text-sm shadow-md flex items-center justify-center gap-2 transition-all cursor-pointer">
+                  <i data-lucide="send" class="w-4 h-4 text-lopfra-sky"></i>
+                  <span>Enviar por Correo</span>
+                </button>
+              </div>
+            </form>
+
+            <!-- Mensaje de Confirmación Visual Inmediata (Sin alert()) -->
+            <div id="form-feedback" class="hidden mt-6 p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-sm flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold">¡Solicitud preparada correctamente!</p>
+                <p id="form-feedback-text" class="text-xs mt-1 text-emerald-800"></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 9. FOOTER CORPORATIVO (INSPIRADO EN AGCO) + BOTÓN FLOTANTE WHATSAPP   -->
+  <!-- ===================================================================== -->
+  <footer class="bg-[#071426] text-slate-300 pt-16 pb-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Columna 1: Resumen Institucional -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-lopfra-dark border border-lopfra-cyan/40 flex items-center justify-center text-lopfra-sky font-heading font-extrabold">
+              GL
+            </div>
+            <div>
+              <span class="text-white font-heading font-extrabold text-base block leading-none">GRUPO LOPFRA</span>
+              <span class="text-[11px] font-bold tracking-[0.2em] text-rose-400 uppercase">INDUSTRIAL</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-5">
+            Equipo especializado en aislamiento térmico para altas y bajas temperaturas, mantenimiento HVAC, pisos epóxicos grado alimenticio, pintura industrial y fabricación de ductería con cobertura nacional.
+          </p>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-lopfra-sky font-semibold">
+            <i data-lucide="shield-check" class="w-4 h-4"></i> Calidad y Seguridad Garantizada
+          </div>
+        </div>
+
+        <!-- Columna 2: Navegación Rápida -->
+        <div>
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Navegación</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="#inicio" class="hover:text-lopfra-sky transition-colors">Inicio</a></li>
+            <li><a href="#nosotros" class="hover:text-lopfra-sky transition-colors">Quiénes Somos, Misión y Visión</a></li>
+            <li><a href="#servicios" class="hover:text-lopfra-sky transition-colors">Nuestros Servicios</a></li>
+            <li><a href="#metodologia" class="hover:text-lopfra-sky transition-colors">Nuestro Personal y Metodología</a></li>
+            <li><a href="#proyectos" class="hover:text-lopfra-sky transition-colors">Galería de Proyectos</a></li>
+            <li><a href="#clientes" class="hover:text-lopfra-sky transition-colors">Clientes y Cobertura</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soluciones Industriales -->
+        <div>
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Soluciones</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="#servicios" class="hover:text-lopfra-sky transition-colors">Aislamiento Térmico (Altas/Bajas Temp.)</a></li>
+            <li><a href="#servicios" class="hover:text-lopfra-sky transition-colors">Pisos Epóxicos Grado Alimenticio</a></li>
+            <li><a href="#servicios" class="hover:text-lopfra-sky transition-colors">Mantenimiento HVAC y Chillers</a></li>
+            <li><a href="#servicios" class="hover:text-lopfra-sky transition-colors">Venta e Instalación de Aire Acondicionado</a></li>
+            <li><a href="#servicios" class="hover:text-lopfra-sky transition-colors">Pintura Especializada Industrial</a></li>
+            <li><a href="#servicios" class="hover:text-lopfra-sky transition-colors">Fabricación e Instalación de Ductería</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Contacto Directo -->
+        <div>
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Contacto Directo</h4>
+          <ul class="space-y-3 text-xs">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-lopfra-red shrink-0 mt-0.5"></i>
+              <span>Calle Alcornoque Mz 22 Lt 5, Col. La Palma, C.P. 55507, Ecatepec de Morelos, Edo. de Méx.</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <a href="https://wa.me/525518537866" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold">
+                +52 55 1853 7866
+              </a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4 h-4 text-lopfra-sky shrink-0"></i>
+              <a href="mailto:gpolopfra@gmail.com" class="hover:text-white font-semibold">
+                gpolopfra@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+        <p>&copy; 2026 Grupo Lopfra Industrial. Todos los derechos reservados.</p>
+        <p class="text-slate-400">Ingeniería en Aislamiento Térmico y Mantenimiento Industrial — México.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón Flotante de WhatsApp -->
+  <a href="https://wa.me/525518537866?text=Hola%20Grupo%20Lopfra%20Industrial,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n."
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp al 55 1853 7866"
+     class="wa-pulse fixed bottom-6 right-6 z-40 flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold px-4 py-3.5 rounded-full shadow-2xl transition-transform hover:scale-105">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+    <span class="hidden sm:inline text-sm">Cotizar Ahora</span>
+  </a>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL LIGHTBOX PARA GALERÍA DE PROYECTOS                              -->
+  <!-- ===================================================================== -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-lopfra-navy/90 backdrop-blur-md flex items-center justify-center p-4" role="dialog" aria-modal="true">
+    <div class="bg-white rounded-2xl max-w-3xl w-full overflow-hidden shadow-2xl border border-slate-200 relative animate-fadeIn">
+      <button onclick="closeLightbox()" aria-label="Cerrar visor"
+              class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-lopfra-navy/80 hover:bg-lopfra-red text-white flex items-center justify-center transition-colors cursor-pointer">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="bg-lopfra-dark max-h-[60vh] overflow-hidden flex items-center justify-center">
+        <img id="lightbox-img" src="" alt="Vista ampliada del proyecto" class="w-full h-auto max-h-[60vh] object-contain" />
+      </div>
+      <div class="p-6 sm:p-8">
+        <span id="lightbox-cat" class="inline-block px-3 py-1 rounded-md bg-lopfra-light text-lopfra-cyan text-xs font-extrabold uppercase tracking-wider mb-2"></span>
+        <h3 id="lightbox-title" class="text-xl sm:text-2xl font-extrabold text-lopfra-navy mb-2"></h3>
+        <p id="lightbox-desc" class="text-sm text-lopfra-slate leading-relaxed mb-5"></p>
+        <div class="flex flex-wrap justify-between items-center gap-3 pt-4 border-t border-slate-100">
+          <span class="text-xs text-slate-400">Ejecutado por Grupo Lopfra Industrial</span>
+          <button onclick="cotizarDesdeLightbox()" class="px-5 py-2.5 rounded-xl bg-lopfra-red hover:bg-lopfra-redDark text-white text-xs font-bold transition-colors cursor-pointer">
+            Cotizar un proyecto similar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- SCRIPTS INTERACTIVOS (MENÚ, FILTROS, LIGHTBOX, COTIZACIÓN, SCROLL)    -->
+  <!-- ===================================================================== -->
+  <script>
+    // Inicializar iconos Lucide
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+      initScrollReveal();
+    });
+
+    // 1. Menú Móvil Responsivo
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden', !isHidden);
+      iconClose.classList.toggle('hidden', isHidden);
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      });
+    });
+
+    // 2. Scroll hacia formulario con preselección de servicio
+    function irACotizacion(servicioSeleccionado) {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+
+      const selectServicio = document.getElementById('servicio');
+      if (selectServicio && servicioSeleccionado) {
+        for (let i = 0; i < selectServicio.options.length; i++) {
+          if (selectServicio.options[i].value.includes(servicioSeleccionado) || servicioSeleccionado === 'General') {
+            if (servicioSeleccionado !== 'General') {
+              selectServicio.selectedIndex = i;
+            }
+            break;
+          }
+        }
+      }
+
+      const seccionContacto = document.getElementById('contacto');
+      if (seccionContacto) {
+        seccionContacto.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          const inputNombre = document.getElementById('nombre');
+          if (inputNombre) inputNombre.focus();
+        }, 650);
+      }
+    }
+
+    // 3. Filtros Interactivos de la Galería de Proyectos
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Actualizar estilos de botones activos
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-lopfra-navy', 'text-white', 'active');
+          b.classList.add('bg-lopfra-light', 'text-lopfra-navy');
+        });
+        btn.classList.remove('bg-lopfra-light', 'text-lopfra-navy');
+        btn.classList.add('bg-lopfra-navy', 'text-white', 'active');
+
+        // Mostrar / ocultar proyectos
+        projectItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          if (filter === 'todos' || category === filter) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // 4. Lightbox de Proyectos
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCat = document.getElementById('lightbox-cat');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    let currentLightboxTitle = '';
+
+    function openLightbox(cardElement) {
+      const imgSrc = cardElement.querySelector('img').src;
+      const title = cardElement.getAttribute('data-title');
+      const cat = cardElement.getAttribute('data-cat');
+      const desc = cardElement.getAttribute('data-desc');
+
+      currentLightboxTitle = title;
+      lightboxImg.src = imgSrc;
+      lightboxCat.textContent = cat;
+      lightboxTitle.textContent = title;
+      lightboxDesc.textContent = desc;
+
+      lightboxModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function cotizarDesdeLightbox() {
+      closeLightbox();
+      const descField = document.getElementById('descripcion');
+      if (descField && currentLightboxTitle) {
+        descField.value = `Me interesa cotizar un proyecto similar a: ${currentLightboxTitle}. `;
+      }
+      irACotizacion('General');
+    }
+
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
+        closeLightbox();
+      }
+    });
+
+    // 5. Envío del Formulario de Cotización (WhatsApp Directo o Correo Electrónico)
+    const quoteForm = document.getElementById('quote-form');
+    const formFeedback = document.getElementById('form-feedback');
+    const formFeedbackText = document.getElementById('form-feedback-text');
+
+    quoteForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitter = e.submitter;
+      const channel = submitter ? submitter.getAttribute('data-channel') : 'whatsapp';
+
+      const nombre = document.getElementById('nombre').value.trim();
+      const empresa = document.getElementById('empresa').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const correo = document.getElementById('correo').value.trim();
+      const servicio = document.getElementById('servicio').value;
+      const ubicacion = document.getElementById('ubicacion').value.trim() || 'Por definir';
+      const descripcion = document.getElementById('descripcion').value.trim();
+
+      const mensajeFormateado = 
+        `Hola Grupo Lopfra Industrial, solicito una cotización:\n\n` +
+        `• Nombre: ${nombre}\n` +
+        `• Empresa: ${empresa}\n` +
+        `• Teléfono: ${telefono}\n` +
+        `• Correo: ${correo}\n` +
+        `• Servicio: ${servicio}\n` +
+        `• Ubicación: ${ubicacion}\n` +
+        `• Requerimiento: ${descripcion}`;
+
+      if (channel === 'whatsapp') {
+        const waUrl = `https://wa.me/525518537866?text=${encodeURIComponent(mensajeFormateado)}`;
+        window.open(waUrl, '_blank', 'noopener,noreferrer');
+        formFeedbackText.textContent = 'Se ha abierto WhatsApp Web / App con los datos de su cotización listos para enviar al +52 55 1853 7866.';
+      } else {
+        const subject = encodeURIComponent(`Solicitud de Cotización - ${servicio} (${empresa})`);
+        const body = encodeURIComponent(mensajeFormateado);
+        window.location.href = `mailto:gpolopfra@gmail.com?subject=${subject}&body=${body}`;
+        formFeedbackText.textContent = 'Se ha abierto su cliente de correo electrónico dirigido a gpolopfra@gmail.com con el resumen de su proyecto.';
+      }
+
+      formFeedback.classList.remove('hidden');
+    });
+
+    // 6. Animaciones suaves al hacer scroll (IntersectionObserver)
+    function initScrollReveal() {
+      const reveals = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        reveals.forEach(el => el.classList.add('visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      reveals.forEach(el => observer.observe(el));
+    }
+  </script>
+</body>
+</html>
